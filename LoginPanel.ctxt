@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LoginPanel
+comment1.params=frame
+comment1.target=LoginPanel(MainFrame)
+comment2.params=
+comment2.target=void\ attemptLogin()
+comment3.params=enabled
+comment3.target=void\ setInputsEnabled(boolean)
+numComments=4

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=FirebaseAuthService
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ FirebaseAuthService.\r\n\ \r\n\ @author\ Thi\u00E9baud\ Reimann\ \r\n\ @version\ 1.0\r\n
+comment1.params=email\ password
+comment1.target=FirebaseAuthService.SignInResponse\ signIn(java.lang.String,\ java.lang.String)
+comment1.text=Meldet\ den\ Nutzer\ per\ E-Mail/Passwort\ an.
+numComments=2

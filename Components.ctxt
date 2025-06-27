@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Components
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Components.\r\n\ \r\n\ @author\ Thi\u00E9baud\ Reimann\ \r\n\ @version\ 1.0\r\n
+comment1.params=columns
+comment1.target=javax.swing.JTextField\ textField(int)
+comment2.params=columns
+comment2.target=javax.swing.JPasswordField\ passwordField(int)
+comment3.params=text\ action
+comment3.target=javax.swing.JButton\ primaryButton(java.lang.String,\ java.awt.event.ActionListener)
+comment4.params=text\ active\ action
+comment4.target=javax.swing.JButton\ navButton(java.lang.String,\ boolean,\ java.awt.event.ActionListener)
+comment5.params=text
+comment5.target=javax.swing.JLabel\ headerTitle(java.lang.String)
+numComments=6

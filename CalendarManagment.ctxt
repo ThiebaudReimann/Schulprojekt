@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CalendarManagment
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ CalenderManagment.\r\n\ Zugriff\ auf\ ArrayList\ mit\ allen\ CalenderEntrys\r\n\ @author\ (Philipp)\ \r\n\ @version\ (0.1)\r\n
+comment1.params=
+comment1.target=CalendarManagment()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ CalendarManagment\r\n
+comment2.params=titel\ discription\ startTime\ endTime
+comment2.target=void\ AddEntry(java.lang.String,\ java.lang.String,\ java.time.LocalDateTime,\ java.time.LocalDateTime)
+comment2.text=\r\n\ Entry\ hinzuf\u00FCgen\r\n\ \r\n\ \r\n\ @param\ titel\ \ \ \ \ \ \ \ Titel\ des\ Entrys\r\n\ @param\ discription\ \ Beschreibung\r\n\ @param\ starttime\ \ \ \ anfang\ des\ Entrys\r\n\ @param\ endtime\ \ \ \ \ \ ende\ des\ Entrys\ \r\n\ \r\n
+comment3.params=title
+comment3.target=void\ RemoveEntry(java.lang.String)
+comment3.text=\r\n\ \r\n\ @param\ titel\ Titel\ des\ zu\ entfernenden\ Entrys\r\n
+comment4.params=title
+comment4.target=CalendarEntry\ getEntry(java.lang.String)
+numComments=5
