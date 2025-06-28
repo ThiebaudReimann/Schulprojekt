@@ -23,6 +23,11 @@ public class MainFrame extends JFrame {
         revalidate();
     }
 
+    public void showSignUpPanel() {
+        setContentPane(new SignUpPanel(this));
+        revalidate();
+    }
+
     public void showHomePanel() {
         setContentPane(new HomePanel(this));
         revalidate();
