@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=SignUpPanel
+comment1.params=frame
+comment1.target=SignUpPanel(MainFrame)
+comment2.params=
+comment2.target=void\ attemptSignUp()
+comment3.params=email
+comment3.target=boolean\ isValidEmail(java.lang.String)
+comment4.params=enabled
+comment4.target=void\ setInputsEnabled(boolean)
+numComments=5

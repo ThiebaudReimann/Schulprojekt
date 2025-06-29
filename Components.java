@@ -11,42 +11,47 @@ import javax.swing.border.AbstractBorder;
  */
 
 public class Components {
-    // Modern Color Palette - Inspired by contemporary mobile app design
-    public static final Color PRIMARY_COLOR      = new Color(64, 224, 208);   // Turquoise
-    public static final Color PRIMARY_VARIANT    = new Color(32, 178, 170);   // Dark Turquoise
-    public static final Color SECONDARY_COLOR    = new Color(135, 206, 235);  // Sky Blue
-    public static final Color ACCENT_COLOR       = new Color(255, 99, 132);   // Coral Pink
-    public static final Color SUCCESS_COLOR      = new Color(76, 175, 80);    // Green
-    public static final Color WARNING_COLOR      = new Color(255, 193, 7);    // Amber
+    // WinUI 3 Fluent Design Color Palette
+    public static final Color PRIMARY_COLOR      = new Color(0, 120, 212);    // Windows Blue
+    public static final Color PRIMARY_VARIANT    = new Color(0, 103, 192);    // Darker Blue
+    public static final Color SECONDARY_COLOR    = new Color(118, 185, 0);    // Windows Green
+    public static final Color ACCENT_COLOR       = new Color(136, 23, 152);   // Windows Purple
+    public static final Color SUCCESS_COLOR      = new Color(16, 124, 16);    // Success Green
+    public static final Color WARNING_COLOR      = new Color(255, 185, 0);    // Warning Amber
+    public static final Color ERROR_COLOR        = new Color(196, 43, 28);    // Error Red
     
-    // Surface and Background Colors
-    public static final Color SURFACE_COLOR      = new Color(255, 255, 255);  // Pure White
-    public static final Color CARD_COLOR         = new Color(248, 250, 252);  // Light Blue Gray
-    public static final Color BACKGROUND_COLOR   = new Color(240, 248, 255);  // Very Light Blue
+    // WinUI 3 Surface and Background Colors
+    public static final Color SURFACE_COLOR      = new Color(255, 255, 255);  // Card Background
+    public static final Color CARD_COLOR         = new Color(249, 249, 249);  // Control Background
+    public static final Color BACKGROUND_COLOR   = new Color(243, 243, 243);  // Page Background
+    public static final Color LAYER_COLOR        = new Color(255, 255, 255);  // Layer Fill
     
-    // Text Colors
+    // WinUI 3 Text Colors
     public static final Color ON_PRIMARY         = Color.WHITE;
-    public static final Color ON_SURFACE         = new Color(30, 41, 59);     // Slate Gray
-    public static final Color ON_BACKGROUND      = new Color(71, 85, 105);    // Medium Slate
-    public static final Color TEXT_SECONDARY     = new Color(148, 163, 184);  // Light Slate
+    public static final Color TEXT_PRIMARY       = new Color(32, 31, 30);     // Text Primary
+    public static final Color TEXT_SECONDARY     = new Color(96, 94, 92);     // Text Secondary
+    public static final Color TEXT_TERTIARY      = new Color(128, 126, 124);  // Text Tertiary
+    public static final Color TEXT_DISABLED      = new Color(161, 159, 157);  // Text Disabled
     
-    // Modern UI Colors
-    public static final Color NAV_BG_COLOR       = SURFACE_COLOR;
+    // WinUI 3 Semantic Colors
+    public static final Color NAV_BG_COLOR       = LAYER_COLOR;
     public static final Color HEADER_BG_COLOR    = PRIMARY_COLOR;
-    public static final Color BORDER_COLOR       = new Color(226, 232, 240);  // Very Light Border
-    public static final Color SHADOW_COLOR       = new Color(0, 0, 0, 12);    // Soft Shadow
-    public static final Color HOVER_COLOR        = new Color(0, 0, 0, 6);     // Light Hover
-    public static final Color FOCUS_COLOR        = new Color(64, 224, 208, 30); // Focus Ring
+    public static final Color BORDER_COLOR       = new Color(227, 227, 227);  // Control Border
+    public static final Color FOCUS_BORDER       = new Color(0, 120, 212);    // Focus Border
+    public static final Color SHADOW_COLOR       = new Color(0, 0, 0, 16);    // Drop Shadow
+    public static final Color HOVER_COLOR        = new Color(0, 0, 0, 6);     // Hover Overlay
+    public static final Color PRESSED_COLOR      = new Color(0, 0, 0, 10);    // Pressed Overlay
 
-    // Modern Typography - Clean and contemporary
-    public static final Font DISPLAY_FONT   = new Font("Segoe UI", Font.BOLD, 24);   // Large titles
-    public static final Font TITLE_FONT     = new Font("Segoe UI", Font.BOLD, 18);   // Section titles
-    public static final Font SUBTITLE_FONT  = new Font("Segoe UI", Font.PLAIN, 16);  // Subtitles
-    public static final Font BODY_FONT       = new Font("Segoe UI", Font.PLAIN, 14);  // Body text
-    public static final Font BUTTON_FONT    = new Font("Segoe UI", Font.BOLD, 14);   // Buttons
-    public static final Font NAV_FONT       = new Font("Segoe UI", Font.PLAIN, 13);  // Navigation
-    public static final Font CAPTION_FONT   = new Font("Segoe UI", Font.PLAIN, 12);  // Small text
-    public static final Font LABEL_FONT     = new Font("Segoe UI", Font.PLAIN, 13);  // Form labels
+    // WinUI 3 Typography - Segoe UI Variable (falls verfügbar) oder Segoe UI
+    public static final Font DISPLAY_FONT   = new Font("Segoe UI", Font.BOLD, 28);   // Large Display
+    public static final Font TITLE_FONT     = new Font("Segoe UI", Font.BOLD, 20);   // Title
+    public static final Font SUBTITLE_FONT  = new Font("Segoe UI", Font.BOLD, 16);   // Subtitle
+    public static final Font BODY_FONT       = new Font("Segoe UI", Font.PLAIN, 14);  // Body
+    public static final Font BODY_STRONG_FONT = new Font("Segoe UI", Font.BOLD, 14); // Body Strong
+    public static final Font BUTTON_FONT    = new Font("Segoe UI", Font.PLAIN, 14);   // Button Text
+    public static final Font NAV_FONT       = new Font("Segoe UI", Font.PLAIN, 12);  // Navigation
+    public static final Font CAPTION_FONT   = new Font("Segoe UI", Font.PLAIN, 12);  // Caption
+    public static final Font LABEL_FONT     = new Font("Segoe UI", Font.PLAIN, 13);  // Form Labels
 
     // Custom Border für abgerundete Ecken
     static class RoundedBorder extends AbstractBorder {
@@ -73,7 +78,7 @@ public class Components {
         
         @Override
         public Insets getBorderInsets(Component c) {
-            return new Insets(12, 16, 12, 16);
+            return new Insets(7, 12, 7, 12);  // Optimiert für bessere Text-Zentrierung
         }
     }
     
@@ -156,81 +161,81 @@ public class Components {
         }
     }
 
-    // Modern Text Field mit abgerundeten Ecken und zeitgemäßem Styling
+    // WinUI 3 Text Field mit Fluent Design styling
     public static JTextField textField(int columns) {
-        RoundedTextField field = new RoundedTextField(columns, 12);
+        RoundedTextField field = new RoundedTextField(columns, 4);  // WinUI 3 hat kleinere Rundungen
         field.setFont(BODY_FONT);
-        field.setForeground(ON_SURFACE);
+        field.setForeground(TEXT_PRIMARY);
         field.setBackground(SURFACE_COLOR);
-        field.setBorder(new RoundedBorder(12, BORDER_COLOR, 1));
-        field.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
-        field.setPreferredSize(new Dimension(field.getPreferredSize().width, 44));
+        field.setBorder(new RoundedBorder(4, BORDER_COLOR, 1));
+        field.setMaximumSize(new Dimension(Integer.MAX_VALUE, 32));  // WinUI 3 Standard-Höhe
+        field.setPreferredSize(new Dimension(field.getPreferredSize().width, 32));
         
-        // Moderne Focus-Styles hinzufügen
+        // WinUI 3 Focus-Styles
         field.addFocusListener(new java.awt.event.FocusAdapter() {
             @Override
             public void focusGained(java.awt.event.FocusEvent evt) {
-                field.setBorder(new RoundedBorder(12, PRIMARY_COLOR, 2));
+                field.setBorder(new RoundedBorder(4, FOCUS_BORDER, 2));
             }
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                field.setBorder(new RoundedBorder(12, BORDER_COLOR, 1));
+                field.setBorder(new RoundedBorder(4, BORDER_COLOR, 1));
             }
         });
         
         return field;
     }
 
-    // Modern Password Field mit verbessertem Styling
+    // WinUI 3 Password Field mit verbessertem Styling
     public static JPasswordField passwordField(int columns) {
-        RoundedPasswordField field = new RoundedPasswordField(columns, 12);
+        RoundedPasswordField field = new RoundedPasswordField(columns, 4);
         field.setFont(BODY_FONT);
-        field.setForeground(ON_SURFACE);
+        field.setForeground(TEXT_PRIMARY);
         field.setBackground(SURFACE_COLOR);
-        field.setBorder(new RoundedBorder(12, BORDER_COLOR, 1));
-        field.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
-        field.setPreferredSize(new Dimension(field.getPreferredSize().width, 44));
+        field.setBorder(new RoundedBorder(4, BORDER_COLOR, 1));
+        field.setMaximumSize(new Dimension(Integer.MAX_VALUE, 32));
+        field.setPreferredSize(new Dimension(field.getPreferredSize().width, 32));
         
-        // Focus-Styling hinzufügen
+        // Focus-Styling
         field.addFocusListener(new java.awt.event.FocusAdapter() {
             @Override
             public void focusGained(java.awt.event.FocusEvent evt) {
-                field.setBorder(new RoundedBorder(12, PRIMARY_COLOR, 2));
+                field.setBorder(new RoundedBorder(4, FOCUS_BORDER, 2));
             }
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                field.setBorder(new RoundedBorder(12, BORDER_COLOR, 1));
+                field.setBorder(new RoundedBorder(4, BORDER_COLOR, 1));
             }
         });
         
         return field;
     }
 
-    // Modern Primary Button mit zeitgemäßem abgerundetem Design
+    // WinUI 3 Primary Button (Accent Button)
     public static JButton primaryButton(String text, ActionListener action) {
-        RoundedButton btn = new RoundedButton(text, 12);
+        RoundedButton btn = new RoundedButton(text, 4);  // WinUI 3 kleinere Rundung
         btn.setBackground(PRIMARY_COLOR);
         btn.setHoverColor(PRIMARY_VARIANT);
         btn.setForeground(ON_PRIMARY);
         btn.setFont(BUTTON_FONT);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btn.setPreferredSize(new Dimension(160, 48));
-        btn.setBorder(BorderFactory.createEmptyBorder(14, 24, 14, 24));
+        btn.setPreferredSize(new Dimension(120, 32));  // WinUI 3 Standard-Button-Größe
+        btn.setBorder(BorderFactory.createEmptyBorder(8, 16, 8, 16));
         
         if (action != null) btn.addActionListener(action);
         return btn;
     }
 
-    // Modern Secondary Button mit sauberem umrandeten Stil
+    // WinUI 3 Secondary Button (Standard Button)
     public static JButton secondaryButton(String text, ActionListener action) {
-        RoundedButton btn = new RoundedButton(text, 12);
-        btn.setBackground(SURFACE_COLOR);
-        btn.setHoverColor(CARD_COLOR);
-        btn.setForeground(ON_SURFACE);
+        RoundedButton btn = new RoundedButton(text, 4);
+        btn.setBackground(CARD_COLOR);
+        btn.setHoverColor(new Color(235, 235, 235));  // Subtle hover
+        btn.setForeground(TEXT_PRIMARY);
         btn.setFont(BUTTON_FONT);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btn.setPreferredSize(new Dimension(160, 48));
-        btn.setBorder(new RoundedBorder(12, BORDER_COLOR, 2));
+        btn.setPreferredSize(new Dimension(120, 32));
+        btn.setBorder(new RoundedBorder(4, BORDER_COLOR, 1));
         
         if (action != null) btn.addActionListener(action);
         return btn;
@@ -251,7 +256,7 @@ public class Components {
             btn.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
         } else {
             btn.setBackground(NAV_BG_COLOR);
-            btn.setForeground(ON_BACKGROUND);
+            btn.setForeground(TEXT_SECONDARY);
             btn.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
         }
         
@@ -272,13 +277,70 @@ public class Components {
         return btn;
     }
 
-    // Modern App Header with elevated styling
-    public static JLabel headerTitle(String text) {
-        JLabel label = new JLabel(text);
-        label.setForeground(ON_PRIMARY);
-        label.setFont(TITLE_FONT);
-        label.setBorder(BorderFactory.createEmptyBorder(16, 20, 16, 20));
-        return label;
+    // Android AppBar style header
+    public static JPanel headerTitle(String text) {
+        JPanel appBar = new JPanel(new BorderLayout());
+        appBar.setBackground(PRIMARY_COLOR);
+        appBar.setPreferredSize(new Dimension(0, 56));  // Standard Android AppBar height
+        appBar.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(0, 0, 0, 12))); // Subtle shadow
+        
+        // Title label with Android styling
+        JLabel titleLabel = new JLabel(text);
+        titleLabel.setForeground(ON_PRIMARY);
+        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 20)); // Android AppBar title size
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 16, 0, 16)); // Android margins
+        
+        appBar.add(titleLabel, BorderLayout.WEST);
+        return appBar;
+    }
+    
+    // Complete Android AppBar with navigation icon
+    public static JPanel createAndroidAppBar(String title, String navIcon, ActionListener navAction) {
+        JPanel appBar = new JPanel(new BorderLayout());
+        appBar.setBackground(PRIMARY_COLOR);
+        appBar.setPreferredSize(new Dimension(0, 56));  // Standard Android AppBar height
+        appBar.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(0, 0, 0, 12))); // Subtle shadow
+        
+        // Navigation button (left side)
+        if (navIcon != null && !navIcon.isEmpty()) {
+            JButton navButton = new JButton(navIcon);
+            navButton.setForeground(ON_PRIMARY);
+            navButton.setBackground(new Color(0, 0, 0, 0)); // Transparent
+            navButton.setFont(new Font("Segoe UI", Font.PLAIN, 18));
+            navButton.setFocusPainted(false);
+            navButton.setBorderPainted(false);
+            navButton.setContentAreaFilled(false);
+            navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            navButton.setPreferredSize(new Dimension(48, 48)); // Android touch target
+            navButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
+            
+            // Android-style hover effect
+            navButton.addMouseListener(new java.awt.event.MouseAdapter() {
+                @Override
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    navButton.setBackground(new Color(255, 255, 255, 20)); // Light overlay
+                    navButton.setOpaque(true);
+                }
+                
+                @Override
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    navButton.setBackground(new Color(0, 0, 0, 0));
+                    navButton.setOpaque(false);
+                }
+            });
+            
+            if (navAction != null) navButton.addActionListener(navAction);
+            appBar.add(navButton, BorderLayout.WEST);
+        }
+        
+        // Title (center-left)
+        JLabel titleLabel = new JLabel(title);
+        titleLabel.setForeground(ON_PRIMARY);
+        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(0, navIcon != null ? 16 : 16, 0, 16));
+        appBar.add(titleLabel, BorderLayout.CENTER);
+        
+        return appBar;
     }
     
     // Modern Card Panel with subtle shadow effect
@@ -344,7 +406,7 @@ public class Components {
     public static JButton iconButton(String text, ActionListener action) {
         JButton btn = new JButton(text);
         btn.setBackground(SURFACE_COLOR);
-        btn.setForeground(ON_SURFACE);
+        btn.setForeground(TEXT_PRIMARY);
         btn.setFont(CAPTION_FONT);
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
@@ -381,7 +443,7 @@ public class Components {
         // Value
         JLabel valueLabel = new JLabel(value);
         valueLabel.setFont(TITLE_FONT);
-        valueLabel.setForeground(ON_SURFACE);
+        valueLabel.setForeground(TEXT_PRIMARY);
         valueLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         // Subtitle (optional)
@@ -404,7 +466,7 @@ public class Components {
     public static JLabel textLabel(String text) {
         JLabel label = new JLabel(text);
         label.setFont(BODY_FONT);
-        label.setForeground(ON_SURFACE);
+        label.setForeground(TEXT_PRIMARY);
         return label;
     }
     
@@ -412,7 +474,7 @@ public class Components {
     public static JLabel subtitleLabel(String text) {
         JLabel label = new JLabel(text);
         label.setFont(SUBTITLE_FONT);
-        label.setForeground(ON_SURFACE);
+        label.setForeground(TEXT_PRIMARY);
         return label;
     }
     
@@ -420,7 +482,7 @@ public class Components {
     public static JLabel captionLabel(String text) {
         JLabel label = new JLabel(text);
         label.setFont(CAPTION_FONT);
-        label.setForeground(ON_BACKGROUND);
+        label.setForeground(TEXT_SECONDARY);
         return label;
     }
     
@@ -437,47 +499,46 @@ public class Components {
         panel.setBackground(SURFACE_COLOR);
         return panel;
     }
+    // WinUI 3 Layout-Hilfsmethoden
     
-    // Layout-Hilfsmethoden für besseres Alignment
-    
-    // Zentriertes Panel für Login/Signup-Formulare
+    // WinUI 3 Zentriertes Panel für Formulare
     public static JPanel createCenteredFormPanel() {
         JPanel mainPanel = new JPanel(new GridBagLayout());
         mainPanel.setBackground(BACKGROUND_COLOR);
         return mainPanel;
     }
     
-    // Formular-Container mit optimaler Breite
+    // WinUI 3 Formular-Container (Card-Style)
     public static JPanel createFormContainer() {
         JPanel container = new JPanel();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setBackground(SURFACE_COLOR);
         container.setBorder(BorderFactory.createCompoundBorder(
-            new RoundedBorder(16, BORDER_COLOR, 1),
-            BorderFactory.createEmptyBorder(32, 32, 32, 32)
+            new RoundedBorder(8, BORDER_COLOR, 1),  // WinUI 3 Card Border Radius
+            BorderFactory.createEmptyBorder(24, 24, 24, 24)  // WinUI 3 Padding
         ));
         container.setMaximumSize(new Dimension(400, Integer.MAX_VALUE));
-        container.setPreferredSize(new Dimension(400, 500));
+        container.setPreferredSize(new Dimension(400, 480));
         return container;
     }
     
-    // Titel für Formulare
+    // WinUI 3 Titel für Formulare
     public static JLabel createFormTitle(String text) {
         JLabel title = new JLabel(text);
-        title.setFont(DISPLAY_FONT);
-        title.setForeground(ON_SURFACE);
+        title.setFont(TITLE_FONT);
+        title.setForeground(TEXT_PRIMARY);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        title.setBorder(BorderFactory.createEmptyBorder(0, 0, 24, 0));
+        title.setBorder(BorderFactory.createEmptyBorder(0, 0, 16, 0));  // Kleinerer Abstand
         return title;
     }
     
-    // Label für Formularfelder
+    // WinUI 3 Label für Formularfelder
     public static JLabel createFieldLabel(String text) {
         JLabel label = new JLabel(text);
         label.setFont(LABEL_FONT);
-        label.setForeground(ON_SURFACE);
+        label.setForeground(TEXT_PRIMARY);
         label.setAlignmentX(Component.LEFT_ALIGNMENT);
-        label.setBorder(BorderFactory.createEmptyBorder(0, 0, 8, 0));
+        label.setBorder(BorderFactory.createEmptyBorder(0, 0, 4, 0));  // Kleinerer Abstand
         return label;
     }
     
@@ -486,16 +547,16 @@ public class Components {
         return Box.createVerticalStrut(height);
     }
     
-    // Button-Container für bessere Ausrichtung
+    // WinUI 3 Button-Container
     public static JPanel createButtonContainer() {
         JPanel container = new JPanel();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setOpaque(false);
-        container.setBorder(BorderFactory.createEmptyBorder(16, 0, 0, 0));
+        container.setBorder(BorderFactory.createEmptyBorder(12, 0, 0, 0));  // Kleinerer Abstand
         return container;
     }
     
-    // Link-Button für "Passwort vergessen" etc.
+    // WinUI 3 Hyperlink Button
     public static JButton createLinkButton(String text, ActionListener action) {
         JButton btn = new JButton(text);
         btn.setFont(BODY_FONT);
@@ -507,11 +568,12 @@ public class Components {
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btn.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-        // Hover-Effekt für Links
+        // WinUI 3 Hover-Effekt für Links
         btn.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn.setForeground(PRIMARY_VARIANT);
+                // Underline-Effekt könnte hier hinzugefügt werden
             }
             
             @Override
@@ -519,6 +581,91 @@ public class Components {
                 btn.setForeground(PRIMARY_COLOR);
             }
         });
+        
+        if (action != null) btn.addActionListener(action);
+        return btn;
+    }
+    
+    // WinUI 3 spezielle Komponenten
+    
+    // WinUI 3 Header mit Fluent Design
+    public static JPanel createWinUI3Header(String title) {
+        JPanel header = new JPanel();
+        header.setLayout(new BorderLayout());
+        header.setBackground(LAYER_COLOR);
+        header.setPreferredSize(new Dimension(0, 48));  // WinUI 3 Standard Header-Höhe
+        header.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, BORDER_COLOR));
+        
+        // Titel
+        JLabel titleLabel = new JLabel(title);
+        titleLabel.setFont(SUBTITLE_FONT);
+        titleLabel.setForeground(TEXT_PRIMARY);
+        titleLabel.setBorder(BorderFactory.createEmptyBorder(0, 16, 0, 16));
+        header.add(titleLabel, BorderLayout.WEST);
+        
+        return header;
+    }
+    
+    // WinUI 3 Mica-Effekt Panel (vereinfacht)
+    public static JPanel createMicaPanel() {
+        JPanel panel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                
+                // Mica-ähnlicher Effekt mit subtilen Gradienten
+                GradientPaint gradient = new GradientPaint(
+                    0, 0, new Color(249, 249, 249, 240),
+                    0, getHeight(), new Color(243, 243, 243, 240)
+                );
+                g2d.setPaint(gradient);
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+                g2d.dispose();
+            }
+        };
+        panel.setOpaque(false);
+        return panel;
+    }
+    
+    // WinUI 3 Navigation Button
+    public static JButton createNavButton(String text, boolean selected, ActionListener action) {
+        JButton btn = new JButton(text);
+        btn.setFont(NAV_FONT);
+        btn.setFocusPainted(false);
+        btn.setBorderPainted(false);
+        btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        btn.setOpaque(true);
+        btn.setPreferredSize(new Dimension(200, 40));  // WinUI 3 Navigation-Button-Größe
+        
+        if (selected) {
+            btn.setBackground(new Color(0, 120, 212, 30));  // Selected state
+            btn.setForeground(PRIMARY_COLOR);
+            btn.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createMatteBorder(0, 3, 0, 0, PRIMARY_COLOR),  // Links-Border für Selected
+                BorderFactory.createEmptyBorder(8, 13, 8, 16)
+            ));
+        } else {
+            btn.setBackground(LAYER_COLOR);
+            btn.setForeground(TEXT_PRIMARY);
+            btn.setBorder(BorderFactory.createEmptyBorder(8, 16, 8, 16));
+        }
+        
+        // WinUI 3 Hover-Effekte
+        if (!selected) {
+            btn.addMouseListener(new java.awt.event.MouseAdapter() {
+                @Override
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    btn.setBackground(new Color(0, 0, 0, 10));  // Subtle hover
+                }
+                
+                @Override
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    btn.setBackground(LAYER_COLOR);
+                }
+            });
+        }
         
         if (action != null) btn.addActionListener(action);
         return btn;
