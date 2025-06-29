@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+
 /**
  * Beschreiben Sie hier die Klasse CalenderManagment.
  * Zugriff auf ArrayList mit allen CalenderEntrys
- * @author (Philipp) 
- * @version (0.1)
+ * @author Philipp, Thiébaud
+ * @version 1.1
  */
 public class CalendarManagment
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private CalendarEntry calendarentry;
-    private ArrayList<CalendarEntry> CalendarEntrys;
+    private ArrayList<CalendarEntry> calendarEntrys;
     
     //Konstruktor
     /**
@@ -18,7 +18,7 @@ public class CalendarManagment
      */
     public CalendarManagment()
     {
-        CalendarEntrys = new ArrayList<CalendarEntry>();
+        calendarEntrys = new ArrayList<CalendarEntry>();
     }
     
     //Methoden
@@ -32,40 +32,23 @@ public class CalendarManagment
      * @param endtime      ende des Entrys 
      * 
      */
-    public void AddEntry(String titel, String discription, LocalDateTime startTime, LocalDateTime endTime) {
-        calendarentry = new CalendarEntry(titel, discription, startTime, endTime);
-        CalendarEntrys.add(calendarentry);
+    public void add(CalendarEntry entry) {
+        calendarEntrys.add(entry);
     }
     
     /**
      * 
      * @param titel Titel des zu entfernenden Entrys
      */
-    public void RemoveEntry(String title) {
-        CalendarEntry tempentry;
-        for(int i=0; i<CalendarEntrys.size(); i++) {
-            tempentry = CalendarEntrys.get(i);
-            if(tempentry.getTitle() == title) {
-                CalendarEntrys.remove(i);
-                break;
-            }
-            else {
-                
-            }
-        }
+    public void remove(int id) {
+        calendarEntrys.removeIf(entry -> entry.id == id);
     }
     
-    public CalendarEntry getEntry(String title) {
-        CalendarEntry tempentry;
-        for(int i=0; i<CalendarEntrys.size(); i++) {
-            tempentry = CalendarEntrys.get(i);
-            if(tempentry.getTitle() == title) {
-                return tempentry;
-            }
-            else {
-                
-            }
-        }
-        return CalendarEntrys.get(0);
-    }    
+    public CalendarEntry getEntry(int id) {
+        return calendarEntrys.get(id);
+    }
+    
+    public ArrayList<CalendarEntry> getAll() {
+        return calendarEntrys;
+    }
 }

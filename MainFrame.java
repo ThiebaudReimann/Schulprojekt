@@ -13,7 +13,20 @@ public class MainFrame extends JFrame {
         setSize(400, 600);
         setLocationRelativeTo(null);
 
-        showLoginPanel(); // Start mit Login
+        // Versuche automatischen Login aus gespeicherten Daten
+        User savedUser = LoginPersistence.loadAndAutoLogin();
+        if (savedUser != null) {
+            User.setCurrentUser(savedUser);
+            showHomePanel();
+            System.out.println("Automatischer Login erfolgreich für: " + savedUser.getDisplayName());
+        } else {
+            // Überprüfen, ob bereits ein Benutzer in der Session eingeloggt ist
+            if (User.isLoggedIn()) {
+                showHomePanel();
+            } else {
+                showLoginPanel(); // Start mit Login
+            }
+        }
 
         setVisible(true);
     }
@@ -30,6 +43,11 @@ public class MainFrame extends JFrame {
 
     public void showHomePanel() {
         setContentPane(new HomePanel(this));
+        revalidate();
+    }
+    
+    public void showCalendarPanel() {
+        setContentPane(new CalendarPanel(this));
         revalidate();
     }
 }

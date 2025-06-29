@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MainFrame
-comment0.text=\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ MainFrame.\n\ \n\ @author\ Thi\u00E9baud\ Reimann\ \n\ @version\ 1.0\n
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ MainFrame.\r\n\ \r\n\ @author\ Thi\u00E9baud\ Reimann\ \r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=MainFrame()
 comment2.params=
@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ showSignUpPanel()
 comment4.params=
 comment4.target=void\ showHomePanel()
-numComments=5
+comment5.params=
+comment5.target=void\ showCalendarPanel()
+numComments=6

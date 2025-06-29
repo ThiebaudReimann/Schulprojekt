@@ -11,18 +11,37 @@ C:\Program Files\BlueJ\jdk\bin\javadoc.exe
 -nohelp
 -nonavbar
 -source
-11
+17
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.11.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.web.jar;Z:\1 Kraus\10amT\FamilienApp
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\javafx-base-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-base-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-controls-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-controls-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-fxml-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-fxml-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-graphics-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-graphics-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-media-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-media-20.0.1.jar;C:\Program Files\BlueJ\lib\javafx-swing-20.0.1-win.jar;C:\Program Files\BlueJ\lib\javafx-web-20.0.1-win.jar;C:\Program Files\BlueJ\lib\junit-4.12.jar;C:\Program Files\BlueJ\lib\junit-jupiter-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\opentest4j-1.2.0.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\javafx.web.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\firebase-admin-9.1.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\gax-1.65.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\gax-grpc-1.65.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\google-api-client-1.31.5.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\google-auth-library-credentials-0.20.0.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\google-auth-library-oauth2-http-0.20.0.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\google-http-client-1.39.2.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\google-http-client-gson-1.39.2.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\grpc-auth-1.34.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\grpc-core-1.34.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\grpc-netty-shaded-1.34.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\grpc-stub-1.34.1.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\gson-2.8.9.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\guava-30.1.1-jre.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\okhttp-3.14.9.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\okio-1.17.5.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\lib\protobuf-java-3.17.3.jar;C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt
 -d
-Z:\1 Kraus\10amT\FamilienApp\doc
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\doc
 -encoding
 UTF-8
 -charset
 UTF-8
-Z:\1 Kraus\10amT\FamilienApp\CalendarEntryEntity.java
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java
 <---- end of javadoc command ---->
-Loading source file Z:\1 Kraus\10amT\FamilienApp\CalendarEntryEntity.java...
+Loading source file C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java...
 Constructing Javadoc information...
-javadoc: error - Destination directory not writable: Z:\1 Kraus\10amT\FamilienApp\doc
-1 error
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\doc\CalendarManagment.html...
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java:29: warning: @param argument "titel" is not a parameter name.
+     * @param titel        Titel des Entrys
+       ^
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java:30: warning: @param argument "discription" is not a parameter name.
+     * @param discription  Beschreibung
+       ^
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java:31: warning: @param argument "starttime" is not a parameter name.
+     * @param starttime    anfang des Entrys
+       ^
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java:32: warning: @param argument "endtime" is not a parameter name.
+     * @param endtime      ende des Entrys 
+       ^
+C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\CalendarManagment.java:41: warning: @param argument "titel" is not a parameter name.
+     * @param titel Titel des zu entfernenden Entrys
+       ^
+Generating C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\doc\package-summary.html...
+Generating C:\Users\ms_th\Documents\Projects\Schulprojekt\Schulprojekt\doc\index.html...
+5 warnings

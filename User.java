@@ -2,35 +2,76 @@
 /**
  * Beschreiben Sie hier die Klasse User.
  * 
- * @author Philipp 
+ * @author Thiébaud Reimann 
  * @version 1.0
  */
+
+import java.util.Map;
+
 public class User
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private String uid;
+    private String displayName;
+    private String email;
     
-    //Konstruktor
-    /**
-     * Konstruktor für Objekte der Klasse User
-     */
-    public User()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    // Statische Instanz für den aktuell eingeloggten Benutzer
+    private static User currentUser = null;
+    
+    public User(String uid, String displayName, String email) {
+        this.uid = uid;
+        this.displayName = displayName;
+        this.email = email;
     }
     
+    public static User fromJson(Map<String, Object> json) {
+        String uid = (String) json.get("uid");
+        String displayName = (String) json.get("displayName");
+        String email = (String) json.get("email");
+        
+        return new User(uid, displayName, email);
+    }
     
-    //Attribute
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+    // Getter-Methoden
+    public String getUid() {
+        return uid;
+    }
+    
+    public String getDisplayName() {
+        return displayName;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    // Setter für displayName falls es aktualisiert werden muss
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+    
+    // Statische Methoden für User-Management
+    public static User getCurrentUser() {
+        return currentUser;
+    }
+    
+    public static void setCurrentUser(User user) {
+        currentUser = user;
+    }
+    
+    public static void logout() {
+        currentUser = null;
+    }
+    
+    public static boolean isLoggedIn() {
+        return currentUser != null;
+    }
+    
+    @Override
+    public String toString() {
+        return "User{" +
+                "uid='" + uid + '\'' +
+                ", displayName='" + displayName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

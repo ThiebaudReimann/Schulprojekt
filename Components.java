@@ -670,4 +670,96 @@ public class Components {
         if (action != null) btn.addActionListener(action);
         return btn;
     }
+    
+    // Neue ListTile-Komponente
+    public static class ListTile extends JPanel {
+        private JLabel titleLabel;
+        private JLabel subtitleLabel;
+        private JLabel iconLabel;
+        
+        public ListTile(String title, String subtitle, String icon, ActionListener action) {
+            setLayout(new BorderLayout());
+            setBackground(SURFACE_COLOR);
+            setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(BORDER_COLOR, 1),
+                BorderFactory.createEmptyBorder(16, 16, 16, 16)
+            ));
+            
+            // Icon (links)
+            iconLabel = new JLabel(icon);
+            iconLabel.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 24));
+            iconLabel.setForeground(PRIMARY_COLOR);
+            iconLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 16));
+            add(iconLabel, BorderLayout.WEST);
+            
+            // Text Content (Mitte)
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setOpaque(false);
+            
+            titleLabel = new JLabel(title);
+            titleLabel.setFont(SUBTITLE_FONT);
+            titleLabel.setForeground(TEXT_PRIMARY);
+            textPanel.add(titleLabel, BorderLayout.NORTH);
+            
+            if (subtitle != null && !subtitle.isEmpty()) {
+                subtitleLabel = new JLabel(subtitle);
+                subtitleLabel.setFont(BODY_FONT);
+                subtitleLabel.setForeground(TEXT_SECONDARY);
+                textPanel.add(subtitleLabel, BorderLayout.CENTER);
+            }
+            
+            add(textPanel, BorderLayout.CENTER);
+            
+            // Pfeil (rechts)
+            JLabel arrowLabel = new JLabel(">");
+            arrowLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
+            arrowLabel.setForeground(TEXT_TERTIARY);
+            add(arrowLabel, BorderLayout.EAST);
+            
+            // Hover-Effekte
+            addMouseListener(new java.awt.event.MouseAdapter() {
+                private Color originalBackground = SURFACE_COLOR;
+                private Color hoverBackground = new Color(240, 240, 240); // Leichter Grauton für Hover
+                private Color pressedBackground = new Color(230, 230, 230); // Dunklerer Grauton für Pressed
+                
+                @Override
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    setBackground(hoverBackground);
+                    setCursor(new Cursor(Cursor.HAND_CURSOR));
+                    repaint();
+                }
+                
+                @Override
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    setBackground(originalBackground);
+                    setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+                    repaint();
+                }
+                
+                @Override
+                public void mousePressed(java.awt.event.MouseEvent evt) {
+                    setBackground(pressedBackground);
+                    repaint();
+                }
+                
+                @Override
+                public void mouseReleased(java.awt.event.MouseEvent evt) {
+                    if (contains(evt.getPoint())) {
+                        setBackground(hoverBackground);
+                        if (action != null) {
+                            action.actionPerformed(new java.awt.event.ActionEvent(this, java.awt.event.ActionEvent.ACTION_PERFORMED, "click"));
+                        }
+                    } else {
+                        setBackground(originalBackground);
+                    }
+                    repaint();
+                }
+            });
+        }
+    }
+    
+    // Factory-Methode für ListTile
+    public static ListTile createListTile(String title, String subtitle, String icon, ActionListener action) {
+        return new ListTile(title, subtitle, icon, action);
+    }
 }

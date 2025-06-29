@@ -128,11 +128,20 @@ public class SignUpPanel extends JPanel {
             try {
                 FirebaseAuthService.SignUpResponse res = authService.signUp(email, password);
                 SwingUtilities.invokeLater(() -> {
+                    // Benutzer automatisch nach Registrierung einloggen
+                    String displayName = generateDisplayNameFromEmail(email);
+                    User user = new User(res.localId, displayName, email);
+                    User.setCurrentUser(user);
+                    
+                    // Login-Daten persistent speichern
+                    LoginPersistence.saveLoginData(email, password, user);
+                    
                     JOptionPane.showMessageDialog(this,
-                        "Registrierung erfolgreich!\nSie werden zur Anmeldung weitergeleitet.",
+                        "Registrierung erfolgreich!\nWillkommen, " + displayName + "!",
                         "Erfolg", JOptionPane.INFORMATION_MESSAGE);
-                    // Nach erfolgreicher Registrierung zur Login-Seite weiterleiten
-                    frame.showLoginPanel();
+                    
+                    // Direkt zum HomePanel weiterleiten
+                    frame.showHomePanel();
                 });
             } catch (IOException ex) {
                 SwingUtilities.invokeLater(() -> {
@@ -155,5 +164,27 @@ public class SignUpPanel extends JPanel {
         passField.setEnabled(enabled);
         confirmPassField.setEnabled(enabled);
         signUpBtn.setEnabled(enabled);
+    }
+    
+    /**
+     * Generiert einen Display-Namen basierend auf der E-Mail-Adresse
+     * @param email Die E-Mail-Adresse
+     * @return Ein Display-Name (Teil vor dem @-Zeichen)
+     */
+    private String generateDisplayNameFromEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return "Benutzer";
+        }
+        
+        int atIndex = email.indexOf('@');
+        if (atIndex > 0) {
+            String username = email.substring(0, atIndex);
+            // Ersten Buchstaben groß schreiben
+            if (!username.isEmpty()) {
+                return username.substring(0, 1).toUpperCase() + username.substring(1).toLowerCase();
+            }
+        }
+        
+        return "Benutzer";
     }
 }

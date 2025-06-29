@@ -107,6 +107,15 @@ public class LoginPanel extends JPanel {
             try {
                 FirebaseAuthService.SignInResponse res = authService.signIn(email, password);
                 SwingUtilities.invokeLater(() -> {
+                    // Benutzer erstellen und als aktuell eingeloggten User setzen
+                    // Hier verwenden wir einen Platzhalter-DisplayName basierend auf der E-Mail
+                    String displayName = generateDisplayNameFromEmail(email);
+                    User user = new User(res.localId, displayName, email);
+                    User.setCurrentUser(user);
+                    
+                    // Login-Daten persistent speichern
+                    LoginPersistence.saveLoginData(email, password, user);
+                    
                     // Erfolg: weiter zur Home-Seite
                     frame.showHomePanel();
                 });
@@ -172,5 +181,27 @@ public class LoginPanel extends JPanel {
         emailField.setEnabled(enabled);
         passField.setEnabled(enabled);
         loginBtn.setEnabled(enabled);
+    }
+    
+    /**
+     * Generiert einen Display-Namen basierend auf der E-Mail-Adresse
+     * @param email Die E-Mail-Adresse
+     * @return Ein Display-Name (Teil vor dem @-Zeichen)
+     */
+    private String generateDisplayNameFromEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return "Benutzer";
+        }
+        
+        int atIndex = email.indexOf('@');
+        if (atIndex > 0) {
+            String username = email.substring(0, atIndex);
+            // Ersten Buchstaben groß schreiben
+            if (!username.isEmpty()) {
+                return username.substring(0, 1).toUpperCase() + username.substring(1).toLowerCase();
+            }
+        }
+        
+        return "Benutzer";
     }
 }
